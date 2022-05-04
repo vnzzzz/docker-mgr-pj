@@ -2,6 +2,7 @@ version: "3"
 
 services:
   web1:
+    container_name: web1
     image: nginx
     volumes:
       - ./web1:/usr/share/nginx/html/web1
@@ -13,6 +14,7 @@ services:
       - traefik.http.routers.web1.rule=PathPrefix(`/web1`)
 
   web2:
+    container_name: web2
     image: nginx
     volumes:
       - ./web2:/usr/share/nginx/html
